@@ -189,10 +189,36 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/index.js":[function(require,module,exports) {
+},{"./..\\img\\heroimage.jpg":[["heroimage.90304a2e.jpg","img/heroimage.jpg"],"img/heroimage.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
 require("../styles/main.scss");
+
+var menuBtn = document.querySelector('#menu-btn');
+var navMenu = document.querySelector('#navmenu');
+var navLink = document.querySelectorAll('.nav-link');
+var navItem4 = document.querySelector('#nav-item4');
+var navItem3 = document.querySelector('#nav-item3');
+var navItem2 = document.querySelector('#nav-item2');
+var navItem1 = document.querySelector('#nav-item1');
+menuBtn.addEventListener("click", function () {
+  menuBtn.classList.toggle("open");
+  navMenu.classList.toggle("open");
+  navItem4.classList.toggle("open");
+  navItem3.classList.toggle("open");
+  navItem2.classList.toggle("open");
+  navItem1.classList.toggle("open");
+});
+navLink.forEach(function (navLink) {
+  return navLink.addEventListener("click", function () {
+    menuBtn.classList.toggle("open");
+    navMenu.classList.toggle("open");
+    navItem4.classList.toggle("open");
+    navItem3.classList.toggle("open");
+    navItem2.classList.toggle("open");
+    navItem1.classList.toggle("open");
+  });
+});
 },{"../styles/main.scss":"styles/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
