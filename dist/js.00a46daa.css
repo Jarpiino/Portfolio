@@ -1,5 +1,8 @@
 body {
-  background: yellow;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #cacaca;
 }
 
 /*# sourceMappingURL=/js.00a46daa.css.map */
