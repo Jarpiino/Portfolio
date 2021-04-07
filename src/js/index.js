@@ -33,9 +33,9 @@ const headline = document.querySelector(".headline");
 
 const tl = new TimelineMax();
 
-tl.fromTo(hero, {height:'0%'},{duration: 1, height:'70%', ease: Power2.easeInOut})
-.fromTo(hero, {width: '100%'}, {duration: 1.2, width: '80%', ease: Power2.easeInOut})
-.fromTo(slider, {x: '-100%'}, {duration: 1.2, x: '0%', ease: Power2.easeInOut}, '-=1.2')
-.fromTo(logo, {opacity: 0, x:30}, {duration: 0.5, opacity: 1, x:0}, '-=0.5')
-.fromTo(hamburger, {opacity: 0, x:30}, {duration: 0.5, opacity: 1, x:0}, '-=0.7')
-.fromTo(headline, {opacity: 0}, {duration: 0.5, opacity: 1}, '-=0.5');
+tl.fromTo(hero, { height: '0%' }, { duration: 1, height: '70%', ease: Power2.easeInOut })
+    .fromTo(hero, { width: '100%' }, { duration: 1.2, width: '80%', ease: Power2.easeInOut })
+    .fromTo(slider, { x: '-100%' }, { duration: 1.2, x: '0%', ease: Power2.easeInOut }, '-=1.2')
+    .fromTo(logo, { opacity: 0, x: 30 }, { duration: 0.5, opacity: 1, x: 0 }, '-=0.5')
+    .fromTo(hamburger, { opacity: 0, x: 30 }, { duration: 0.5, opacity: 1, x: 0 }, '-=0.7')
+    .fromTo(headline, { opacity: 0 }, { duration: 0.5, opacity: 1 }, '-=0.5');
