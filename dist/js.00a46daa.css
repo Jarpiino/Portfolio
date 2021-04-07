@@ -1,11 +1,24 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #3b3b3b;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/background100.37f04422.jpg);
+  z-index: -1;
+  background-size: cover;
 }
 
 nav {
+  z-index: 99;
+  width: 100%;
+  position: fixed;
   align-items: center;
   display: grid;
   grid-template-columns: 10% 1fr 1fr 10%;
@@ -14,6 +27,8 @@ nav {
 }
 
 #logo {
+  left: 50%;
+  z-index: 10;
   font: 2em "Orbitron", sans-serif;
   letter-spacing: 0.2em;
   grid-column: 2/3;
@@ -124,6 +139,7 @@ nav {
   transform: scaleX(1);
 }
 
+/*https://www.youtube.com/watch?v=dIyVTjJAkLw*/
 #menu-btn {
   z-index: 5;
   position: relative;
@@ -169,6 +185,7 @@ nav {
   transform: translateY(16px);
 }
 
+/*ANIMATION*/
 #menu-btn.open #menu-btn-burger {
   transform: translateX(-50px);
   background: transparent;
@@ -180,27 +197,46 @@ nav {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
+body > main > section {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
 .home {
-  position: absolute;
-  height: 90vh;
+  position: relative;
+  height: 100vh;
   width: 100%;
 }
 
 .home-content {
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  position: absolute;
+  height: 80%;
+  width: 100%;
 }
-.home-content h1 {
-  font: 2em "New Tegomin", serif;
-  font-size: 4em;
-  color: white;
+.home-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-content:after {
+  content: "";
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 
-.home {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/heroimage.90304a2e.jpg);
-  background-size: cover;
+.headline {
+  z-index: 3;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  font-size: 80px;
+  color: white;
+  transform: translate(0, -60%);
 }
 
 /*# sourceMappingURL=/js.00a46daa.css.map */
