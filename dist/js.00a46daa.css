@@ -55,14 +55,14 @@ nav {
   right: 0;
 }
 
-#nav-item1 {
+#nav-item1, #nav-item2, #nav-item3, #nav-item4 {
   opacity: 0;
   margin-left: 500px;
-  transition: 0.5s ease;
+  transition: 0.8s ease;
   padding: 3em;
 }
 
-#nav-item1.open {
+#nav-item1.open, #nav-item2.open, #nav-item3.open, #nav-item4.open {
   opacity: 1;
   margin-left: 0;
   transition: 0.8s ease;
@@ -70,44 +70,26 @@ nav {
 }
 
 #nav-item2 {
-  opacity: 0;
-  margin-left: 500px;
-  transition: 0.5s ease;
-  padding: 3em;
+  transition-delay: 0.05s;
 }
 
 #nav-item2.open {
-  opacity: 1;
-  margin-left: 0;
-  transition: 0.8s ease;
   transition-delay: 0.4s;
 }
 
 #nav-item3 {
-  opacity: 0;
-  margin-left: 500px;
-  transition: 0.5s ease;
-  padding: 3em;
+  transition-delay: 0.1s;
 }
 
 #nav-item3.open {
-  opacity: 1;
-  margin-left: 0;
-  transition: 0.8s ease;
   transition-delay: 0.45s;
 }
 
 #nav-item4 {
-  opacity: 0;
-  margin-left: 500px;
-  transition: 0.5s ease;
-  padding: 3em;
+  transition-delay: 0.15s;
 }
 
 #nav-item4.open {
-  opacity: 1;
-  margin-left: 0;
-  transition: 0.8s;
   transition-delay: 0.5s;
 }
 
@@ -238,6 +220,12 @@ body > main > section {
   font-size: 80px;
   color: white;
   transform: translate(0, -60%);
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-link {
+    font: 2em "Orbitron", sans-serif;
+  }
 }
 
 /*# sourceMappingURL=/js.00a46daa.css.map */

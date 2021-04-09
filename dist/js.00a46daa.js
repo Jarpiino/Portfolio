@@ -5729,6 +5729,7 @@ exports.tl = exports.headline = exports.hamburger = exports.logo = exports.slide
 
 var _gsap = require("gsap");
 
+var Mobile = window.innerWidth < 768;
 var hero = document.querySelector(".home-content");
 exports.hero = hero;
 var slider = document.querySelector(".slider");
@@ -5759,25 +5760,15 @@ tl.fromTo(hero, {
   duration: 1.2,
   x: '0%',
   ease: 'power2'
-}, '-=1.2').fromTo(logo, {
+}, '-=1.2').from(logo, {
   opacity: 0,
-  x: 30
-}, {
-  duration: 0.5,
-  opacity: 1,
-  x: 0
-}, '-=0.5').fromTo(hamburger, {
+  duration: 0.5
+}, '-=0.5').from(hamburger, {
   opacity: 0,
-  x: 30
-}, {
-  duration: 0.5,
-  opacity: 1,
-  x: 0
-}, '-=0.7').fromTo(headline, {
-  opacity: 0
-}, {
-  duration: 0.5,
-  opacity: 1
+  duration: 0.5
+}, '-=0.7').from(headline, {
+  opacity: 0,
+  duration: 0.5
 }, '-=0.5');
 },{"gsap":"../node_modules/gsap/index.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
@@ -5819,7 +5810,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52249" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63864" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

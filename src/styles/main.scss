@@ -6,6 +6,7 @@ $colors: (
 $logofont: 2em "Orbitron", sans-serif;
 $primary-font: 2em "New Tegomin", serif;
 $navmenu-font: 3em "Orbitron", sans-serif;
+$mobilenavmenu-font: 2em "Orbitron", sans-serif;
 
 @function color($color-name) {
     @return map-get($colors, $color-name);
@@ -62,52 +63,34 @@ nav {
 #navmenu.open {
     right: 0;
 }
-#nav-item1 {
+#nav-item1, #nav-item2, #nav-item3, #nav-item4{
     opacity: 0;
     margin-left: 500px;
-    transition: 0.5s ease;
+    transition: 0.8s ease;
     padding: 3em;
 }
-#nav-item1.open {
+#nav-item1.open, #nav-item2.open,#nav-item3.open,#nav-item4.open{
     opacity: 1;
     margin-left: 0;
     transition: 0.8s ease;
     transition-delay: 0.35s;
 }
 #nav-item2 {
-    opacity: 0;
-    margin-left: 500px;
-    transition: 0.5s ease;
-    padding: 3em;
+    transition-delay: .05s;
 }
 #nav-item2.open {
-    opacity: 1;
-    margin-left: 0;
-    transition: 0.8s ease;
     transition-delay: 0.4s;
 }
 #nav-item3 {
-    opacity: 0;
-    margin-left: 500px;
-    transition: 0.5s ease;
-    padding: 3em;
+    transition-delay: 0.1s;
 }
 #nav-item3.open {
-    opacity: 1;
-    margin-left: 0;
-    transition: 0.8s ease;
     transition-delay: 0.45s;
 }
 #nav-item4 {
-    opacity: 0;
-    margin-left: 500px;
-    transition: 0.5s ease;
-    padding: 3em;
+    transition-delay: 0.15s;
 }
 #nav-item4.open {
-    opacity: 1;
-    margin-left: 0;
-    transition: 0.8s;
     transition-delay: 0.5s;
 }
 .nav-list {
@@ -246,3 +229,10 @@ body {
 //     position: absolute;
 //     top: 200vh;
 // }
+
+@media only screen and (max-width: 768px){
+    .nav-link {
+        font: $mobilenavmenu-font;
+    }
+
+}
